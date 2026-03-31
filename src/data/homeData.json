@@ -1,0 +1,33 @@
+{
+  "navData": [
+    {
+      "id": 1,
+      "label": "Who we are",
+      "submenu": [
+        { "id": 1, "label": "About Us", "link": "/about-us" },
+        { "id": 2, "label": "Our Team", "link": "/our-team" }
+      ]
+    },
+    {
+      "id": 2,
+      "label": "Who we treat",
+      "submenu": [
+        { "id": 1, "label": "Adults", "link": "/adults" },
+        { "id": 2, "label": "Children", "link": "/children" }
+      ]
+    },
+    {
+      "id": 3,
+      "label": "Services",
+      "link": "/services"
+    },
+    {
+      "id": 4,
+      "label": "Resources",
+      "submenu": [
+        { "id": 1, "label": "Blog", "link": "/blog" },
+        { "id": 2, "label": "FAQs", "link": "/faqs" }
+      ]
+    }
+  ]
+}
