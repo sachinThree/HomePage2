@@ -5,51 +5,11 @@ import facebook from "../assets/facebook.png";
 import linkedin from "../assets/linkedin.png";
 import tiktok from "../assets/tik-tok.png";
 import twitter from "../assets/twitter.png";
+import { footerData } from "../data/footerData.json";
 
 export default function Footer() {
-  const footerData = [
-    {
-      title: "Quick Links",
-      width: "w-full md:w-[33%] lg:w-[16%]",
-      links: [
-        { name: "Who We Are", url: "/who-we-are" },
-        { name: "What We Treat", url: "/what-we-treat" },
-        { name: "Services", url: "/services" },
-        { name: "Contact Us", url: "/contact" },
-      ],
-    },
-    {
-      title: "Resources",
-      width: "w-full md:w-[33%] lg:w-[16%]",
-      links: [
-        { name: "FAQs", url: "/faqs" },
-        { name: "Blog", url: "/blog" },
-        { name: "Fees and Insurance", url: "/fees" },
-      ],
-    },
-    {
-      title: "Legal",
-      width: "w-full md:w-[33%] lg:w-[16%]",
-      links: [
-        { name: "Terms", url: "/terms" },
-        { name: "Privacy", url: "/privacy" },
-        { name: "Return Policy", url: "/returns" },
-        { name: "Cookie Settings", url: "/cookies" },
-      ],
-    },
-    {
-      title: "Business Hours",
-      width: "w-full md:w-[33%] lg:w-[24%]",
-      custom: true,
-    },
-    {
-      title: "Locate us",
-      width: "w-full md:w-[33%] lg:w-[28%]",
-      custom: true,
-    },
-  ];
 
-  return (
+  return (  
     <footer className="bg-black text-gray-300 px-6 md:px-16 pt-20 pb-20 md:pb-26">
       <div className="max-w-7xl mx-auto flex flex-wrap justify-between md:justify-start gap-y-10">
         {footerData.map((section, index) => (

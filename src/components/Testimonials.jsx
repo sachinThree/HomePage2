@@ -5,59 +5,13 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 import carlrowan from "../assets/carl-rowan.png";
+import { testimonials } from "../data/testimonialsData.json";
 
 const title = "What Our Patients Are saying";
 
-const testimonials = [
-  {
-    text: "ADA took a lot of the anxiety and stress out of the equation. I was able to easily sort the directory, and the provider profiles were so helpful in giving me a sense of their energy and approach.",
-    name: "Carl Rowan",
-    company: "Aglets Inc",
-    image: carlrowan,
-  },
-  {
-    text: "ADA took a lot of the anxiety and stress out of the equation. I was able to easily sort the directory, and the provider profiles were so helpful in giving me a sense of their energy and approach.",
-    name: "John Doe",
-    company: "Health Corp",
-    image: carlrowan,
-  },
-  {
-    text: "ADA took a lot of the anxiety and stress out of the equation. I was able to easily sort the directory, and the provider profiles were so helpful in giving me a sense of their energy and approach.",
-    name: "Sarah Smith",
-    company: "Wellness Inc",
-    image: carlrowan,
-  },
-  {
-    text: "ADA took a lot of the anxiety and stress out of the equation. I was able to easily sort the directory, and the provider profiles were so helpful in giving me a sense of their energy and approach.",
-    name: "Mike Ross",
-    company: "LegalTech",
-    image: carlrowan,
-  },
-  {
-    text: "ADA took a lot of the anxiety and stress out of the equation. I was able to easily sort the directory, and the provider profiles were so helpful in giving me a sense of their energy and approach.",
-    name: "Carl Rowan",
-    company: "Aglets Inc",
-    image: carlrowan,
-  },
-  {
-    text: "ADA took a lot of the anxiety and stress out of the equation. I was able to easily sort the directory, and the provider profiles were so helpful in giving me a sense of their energy and approach.",
-    name: "Sarah Smith",
-    company: "Wellness Inc",
-    image: carlrowan,
-  },
-  {
-    text: "ADA took a lot of the anxiety and stress out of the equation. I was able to easily sort the directory, and the provider profiles were so helpful in giving me a sense of their energy and approach.",
-    name: "Mike Ross",
-    company: "LegalTech",
-    image: carlrowan,
-  },
-  {
-    text: "ADA took a lot of the anxiety and stress out of the equation. I was able to easily sort the directory, and the provider profiles were so helpful in giving me a sense of their energy and approach.",
-    name: "Carl Rowan",
-    company: "Aglets Inc",
-    image: carlrowan,
-  },
-];
+const testimonialsMap = {
+  carlrowan: carlrowan,
+};
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -123,7 +77,7 @@ export default function Testimonials() {
               {/* Bottom */}
               <div className="bg-[#C18C2C] text-white flex items-center justify-center gap-4 px-6 py-4 mt-auto md:h-[122px]">
                 <img
-                  src={item.image}
+                  src={testimonialsMap[item.image]}
                   alt={item.name}
                   className="w-[60px] h-[60px] rounded-full border border-white"
                 />

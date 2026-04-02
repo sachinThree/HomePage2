@@ -3,26 +3,16 @@ import React from "react";
 import arizona from "../assets/arizona.png";
 import washington from "../assets/washington.png";
 import oregon from "../assets/oregon.png";
+import { states } from "../data/statesData.json";
+
+const statesMap = {
+  arizona,
+  washington,
+  oregon,
+};
 
 const title = "Now Accepting Patients In The Following States";
 
-const states = [
-  {
-    name: "Arizona",
-    desc: "In-person and Virtual appointment",
-    image: arizona,
-  },
-  {
-    name: "Washington",
-    desc: "Virtual appointment",
-    image: washington,
-  },
-  {
-    name: "Oregon",
-    desc: "Virtual appointment",
-    image: oregon,
-  },
-];
 
 export default function States() {
   return (
@@ -42,7 +32,7 @@ export default function States() {
               {/* Semi-circle Image */}
               <div className="w-full aspect-[2/1] overflow-hidden rounded-t-full">
                 <img
-                  src={item.image}
+                  src={statesMap[item.image]}
                   alt={item.name}
                   className="w-full h-full"
                 />

@@ -3,30 +3,14 @@ import mentalHealthImg from "../assets/mental-health2.png";
 import addictionImg from "../assets/addiction.png";
 import weightLossImg from "../assets/supervised.png";
 import GradientButton from "./GradientButton";
-
+import { data } from "../data/treatmentData.json";
 const title = "Our Treatment Focus";
 
-
-const data = [
-  {
-    title: "Mental Health",
-    desc: `Mental health is our emotional, psychological, and social well-being. It affects how we feel, think, and act. It also helps determine how we handle stress, build relationships, relate to others, and make healthy life decisions. Mental health is vital at every stage of life.`,
-    img: mentalHealthImg,
-    reverse: false,
-  },
-  {
-    title: "Addiction And Recovery",
-    desc: `Addiction is a chronic dysfunction of the brain system. An individual experiencing addiction will have difficulty staying away from the addictive behavior, display a lack of self-control, and lack an emotional response.`,
-    img: addictionImg,
-    reverse: true,
-  },
-  {
-    title: "Supervised Medical Weight Loss",
-    desc: `The primary indicator of obesity is when a person's body mass index (BMI) is 30 or higher. Medically supervised weight loss is a program designed for individuals who are obese and are having difficulty losing weight.`,
-    img: weightLossImg,
-    reverse: false,
-  },
-];
+const dataMap = {
+  mentalHealthImg,
+  addictionImg,
+  weightLossImg,
+};
 
 const Treatment = () => {
   return (
@@ -47,7 +31,7 @@ const Treatment = () => {
             <div className="flex-shrink-0">
               <div className="w-[220px] h-[220px] md:w-[260px] md:h-[260px] rounded-full">
                 <img
-                  src={item.img}
+                  src={dataMap[item.img]}
                   alt={item.title}
                   className="w-full h-full object-cover rounded-full"
                 />

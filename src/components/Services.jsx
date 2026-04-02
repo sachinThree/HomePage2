@@ -5,35 +5,16 @@ import hospital from "../assets/hospital.png";
 import mentalhealth from "../assets/mental-health.png";
 import brain from "../assets/brain.png";
 import GradientButton from "./GradientButton";
+import { services } from "../data/servicesData.json";
 
 const title = "Our Services";
 
-const services = [
-  {
-    icon: humanbrain,
-    title: "Psychiatric Evaluation",
-  },
-  {
-    icon: hospital,
-    title: "Medication Management",
-  },
-  {
-    icon: mentalhealth,
-    title: "Supportive Psychotherapy",
-  },
-  {
-    icon: brain,
-    title: "ADHD Screening",
-  },
-  {
-    icon: humanbrain,
-    title: "MAT Treatment",
-  },
-  {
-    icon: hospital,
-    title: "Gene Sight Testing",
-  },
-];
+const iconMap = {
+  humanbrain,
+  hospital,
+  mentalhealth,
+  brain,
+};
 
 const Services = () => {
   return (
@@ -56,7 +37,7 @@ const Services = () => {
               {/* Icon Circle */}
               <div className="w-[100px] h-[100px] flex items-center justify-center rounded-full bg-[#f7eed9] mb-4">
                 <img
-                  src={service.icon}
+                  src={iconMap[service.icon]}
                   alt={service.title}
                   className="w-14 h-14 object-contain"
                 />

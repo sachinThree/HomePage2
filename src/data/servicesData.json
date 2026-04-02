@@ -1,0 +1,28 @@
+{
+  "services": [
+        {
+            "icon": "humanbrain",
+            "title": "Psychiatric Evaluation"
+        },
+        {
+            "icon": "hospital",
+            "title": "Medication Management"
+        },
+        {
+            "icon": "mentalhealth",
+            "title": "Supportive Psychotherapy"
+        },
+        {
+            "icon": "brain",
+            "title": "ADHD Screening"
+        },
+        {
+            "icon": "humanbrain",
+            "title": "MAT Treatment"
+        },
+        {
+            "icon": "hospital",
+            "title": "Gene Sight Testing"
+        }
+    ]
+}

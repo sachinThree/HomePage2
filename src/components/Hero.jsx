@@ -6,44 +6,12 @@ import "swiper/css";
 
 import hero from "../assets/hero.png";
 import GradientButton from "./GradientButton";
+import { slides } from "../data/heroData.json";
 
-const slides = [
-  {
-    image: hero,
-    title: "NEED A MENTAL HEALTH PROVIDER?",
-    subtitle: "No Look Further",
-    description:
-      "Our goal is to provide a safe, comfortable, and warm environment so that you can openly discuss your mental health needs. ",
-  },
-  {
-    image: hero,
-    title: "NEED A MENTAL HEALTH PROVIDER?",
-    subtitle: "You're Not Alone",
-    description:
-      "Our goal is to provide a safe, comfortable, and warm environment so that you can openly discuss your mental health needs. ",
-  },
-  {
-    image: hero,
-    title: "NEED A MENTAL HEALTH PROVIDER?",
-    subtitle: "We’re Here For You",
-    description:
-      "Our goal is to provide a safe, comfortable, and warm environment so that you can openly discuss your mental health needs. ",
-  },
-  {
-    image: hero,
-    title: "NEED A MENTAL HEALTH PROVIDER?",
-    subtitle: "No Look Further",
-    description:
-      "Our goal is to provide a safe, comfortable, and warm environment so that you can openly discuss your mental health needs.",
-  },
-  {
-    image: hero,
-    title: "NEED A MENTAL HEALTH PROVIDER?",
-    subtitle: "You're Not Alone",
-    description:
-      "Our goal is to provide a safe, comfortable, and warm environment so that you can openly discuss your mental health needs. ",
-  },
-];
+const imageMap = {
+  hero: hero
+};
+
 
 export default function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -71,7 +39,7 @@ export default function Hero() {
               {/* Background Image */}
               <div
                 className="absolute inset-0 w-full h-full bg-cover bg-center"
-                style={{ backgroundImage: `url(${slide.image})` }}
+                style={{ backgroundImage: `url(${imageMap[slide.image]})` }}
               />
 
               {/* Overlay */}

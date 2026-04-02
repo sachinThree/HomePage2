@@ -1,0 +1,19 @@
+{
+  "states": [
+        {
+            "name": "Arizona",
+            "desc": "In-person and Virtual appointment",
+            "image": "arizona"
+        },
+        {
+            "name": "Washington",
+            "desc": "Virtual appointment",
+            "image": "washington"
+        },
+        {
+            "name": "Oregon",
+            "desc": "Virtual appointment",
+            "image": "oregon"
+        }
+    ]
+}

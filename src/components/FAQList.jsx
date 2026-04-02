@@ -23,7 +23,7 @@ const FAQList = ({ faqs, borderColor = "border-[#C18C2C]/20" }) => {
             {/* Question */}
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full flex items-start gap-4 text-left"
+              className="w-full flex items-start gap-4 text-left cursor-pointer"
             >
               {/* Icon */}
               <span className="relative w-[20px] h-[20px] flex items-center justify-center mt-1">

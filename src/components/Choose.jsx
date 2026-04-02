@@ -1,35 +1,13 @@
 import React, { useState } from "react";
 import psychiatry from "../assets/psychiatry.png";
 import FAQList from "./FAQList";
+import { choose as faqs } from "../data/chooseData.json";
 
 const Choose = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   const title = "Why Should You Choose Ada Psychiatry?";
 
-
-  const faqs = [
-    {
-      question: "Convenient access",
-      answer:
-        "We Offer In-Person And Virtual Psychiatry Services Where You Can Meet Your Provider In Person Or At The Convenience Of Your Own Home.",
-    },
-    {
-      question: "Concierge approach",
-      answer:
-        "Personalized care tailored to each patient with dedicated attention and flexible communication. Personalized care tailored to each ",
-    },
-    {
-      question: "High quality service",
-      answer:
-        "We ensure top-tier psychiatric care with evidence-based practices and modern treatment approaches. We ensure top-tier psychiatric ",
-    },
-    {
-      question: "Trusted and empathic providers",
-      answer:
-        "Our providers are experienced, compassionate, and committed to understanding your needs. Our providers are experienced,",
-    },
-  ];
 
   const toggle = (index) => {
     setOpenIndex(index === openIndex ? null : index);

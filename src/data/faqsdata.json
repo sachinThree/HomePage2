@@ -1,0 +1,20 @@
+{
+  "faqs": [
+    {
+      "question": "Is Ada psychiatry confidential?",
+      "answer": "We Offer In-Person And Virtual Psychiatry Services Where You Can Meet Your Provider In Person Or At The Convenience Of Your Own Home."
+    },
+    {
+      "question": "What is the best way to schedule a appointment?",
+      "answer": "You can schedule an appointment online..."
+    },
+    {
+      "question": "Do you prescribe controlled substance medication?",
+      "answer": "Yes, our licensed providers may prescribe..."
+    },
+    {
+      "question": "How long does the initial appointment take?",
+      "answer": "Initial appointments typically take 45–60 minutes..."
+    }
+  ]
+}

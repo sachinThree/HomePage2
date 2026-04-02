@@ -1,0 +1,24 @@
+{
+  "steps": [
+    {
+      "id": 1,
+      "title": "Schedule an appointment",
+      "icon": "schedule"
+    },
+    {
+      "id": 2,
+      "title": "Connect with your provider",
+      "icon": "connect"
+    },
+    {
+      "id": 3,
+      "title": "Discuss your comprehensive assessment",
+      "icon": "discuss"
+    },
+    {
+      "id": 4,
+      "title": "Receive your individualized treatment plan",
+      "icon": "plan"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "title": "Mental Health",
+      "desc": "Mental health is our emotional, psychological, and social well-being. It affects how we feel, think, and act. It also helps determine how we handle stress, build relationships, relate to others, and make healthy life decisions. Mental health is vital at every stage of life.",
+      "img": "mentalHealthImg",
+      "reverse": false
+    },
+    {
+      "title": "Addiction And Recovery",
+      "desc": "Addiction is a chronic dysfunction of the brain system. An individual experiencing addiction will have difficulty staying away from the addictive behavior, display a lack of self-control, and lack an emotional response.",
+      "img": "addictionImg",
+      "reverse": true
+    },
+    {
+      "title": "Supervised Medical Weight Loss",
+      "desc": "The primary indicator of obesity is when a person's body mass index (BMI) is 30 or higher. Medically supervised weight loss is a program designed for individuals who are obese and are having difficulty losing weight.",
+      "img": "weightLossImg",
+      "reverse": false
+    }
+  ]
+}

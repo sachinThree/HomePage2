@@ -6,30 +6,15 @@ import discuss from "../assets/discuss.png";
 import plan from "../assets/plan.png";
 import GradientButton from "./GradientButton";
 
+import { steps } from "../data/fourStepsData.json";
 const title = "Four Simple Steps To Get Started";
 
-const steps = [
-  {
-    id: 1,
-    title: "Schedule an appointment",
-    icon: schedule
-  },
-  {
-    id: 2,
-    title: "Connect with your provider",
-    icon: connect,
-  },
-  {
-    id: 3,
-    title: "Discuss your comprehensive assessment",
-    icon: discuss,
-  },
-  {
-    id: 4,
-    title: "Receive your individualized treatment plan",
-    icon: plan,
-  },
-];
+const iconMap = {
+  schedule,
+  connect,
+  discuss,
+  plan,
+};
 
 export default function FourSteps() {
   return (
@@ -56,7 +41,7 @@ export default function FourSteps() {
 
                   {/* Icon */}
                   <div className="mb-4">
-                    <img src={Icon} alt={step.title} className="w-[50px] h-[50px]" />
+                    <img src={iconMap[step.icon]} alt={step.title} className="w-[50px] h-[50px]" />
                   </div>
 
                   {/* Number */}
