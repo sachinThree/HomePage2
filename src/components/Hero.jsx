@@ -43,7 +43,7 @@ export default function Hero() {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,#000000_0%,rgba(0,0,0,0)_56%)]" />
 
               {/* Content */}
               <div className="relative z-10 flex items-center h-full px-6 md:px-16 lg:px-24 xl:px-[160px]">
