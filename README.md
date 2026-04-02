@@ -64,6 +64,7 @@ Example:
     }
   ]
 }
+```
 
 ## ⚙️ Installation & Setup
 
@@ -79,7 +80,9 @@ npm install
 
 # 4️⃣ Start development server
 npm run dev
+```
 
-## 🌐 Live Preview URL
+🌐 Live Preview URL
 https://skhome-page.netlify.app/
+
 
