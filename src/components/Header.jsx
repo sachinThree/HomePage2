@@ -2,6 +2,9 @@ import { useState } from "react";
 import logo from "../assets/logo.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import homeData from "../data/homeData.json";
+import GradientButton from "./GradientButton";
+
+const logoText = "Ada Psychiatry";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,8 +19,8 @@ const Header = () => {
         {/* Logo */}
         <div className="flex items-center gap-3 lg:gap-5">
           <img src={logo} alt="Logo" className="h-auto" />
-          <h1 className="text-md lg:text-lg font-semibold tracking-[3px]">
-            Ada Psychiatry
+          <h1 className="text-[14px] lg:text-[16px] font-[600] tracking-[3px] font-worksans">
+            {logoText}
           </h1>
         </div>
 
@@ -29,7 +32,7 @@ const Header = () => {
               {/* Main Link */}
               <a
                 href={item.link || "#"}
-                className="flex items-center whitespace-nowrap text-xs lg:text-sm font-medium gap-1"
+                className="flex items-center whitespace-nowrap text-xs lg:text-sm font-[500] gap-1 font-worksans"
               >
                 {item.label}
 
@@ -59,9 +62,7 @@ const Header = () => {
 
         {/* Desktop Button */}
         <div className="hidden md:block">
-          <button className="bg-[linear-gradient(90deg,#C18C2C_0%,#FCF38A_50.52%,#C18C2C_100%)] text-black min-w-[180px] lg:min-w-[209px] min-h-[40px] lg:min-h-[46px] rounded-full text-sm font-medium">
-            Book an Appointment
-          </button>
+          <GradientButton text="Book an Appointment" />
         </div>
 
         {/* Animated Hamburger */}
@@ -130,10 +131,7 @@ const Header = () => {
                 )}
               </div>
             ))}
-
-            <button className="bg-[linear-gradient(90deg,#C18C2C_0%,#FCF38A_50.52%,#C18C2C_100%)] text-black w-full h-[40px] rounded-full text-sm font-medium">
-              Book an Appointment
-            </button>
+            <GradientButton text="Book an Appointment" fullWidth className="h-[40px] mt-4" />
 
           </nav>
         </div>

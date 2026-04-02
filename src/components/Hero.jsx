@@ -1,96 +1,160 @@
-import Slider from "react-slick";
-import heroImg from "../assets/hero.png";
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
+import "swiper/css";
 
-const Hero = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    autoplay: true,
-    speed: 600,
-    autoplaySpeed: 4000,
-    arrows: false,
-    pauseOnHover: false,
-    dotsClass: "slick-dots custom-dots",
-  };
+import hero from "../assets/hero.png";
+import GradientButton from "./GradientButton";
 
-  const slides = [
-    {
-      id: 1,
-      title: "NEED A MENTAL HEALTH PROVIDER?",
-      subtitle: "No Look Further",
-      desc: "Our goal is to provide a safe, comfortable, and warm environment so that you can openly discuss your mental health needs.",
-      img: heroImg,
-    },
-    {
-      id: 2,
-      title: "YOUR MENTAL WELLNESS MATTERS",
-      subtitle: "We are here for you",
-      desc: "Professional care and guidance for your mental health journey.",
-      img: heroImg,
-    },
-  ];
+const slides = [
+  {
+    image: hero,
+    title: "NEED A MENTAL HEALTH PROVIDER?",
+    subtitle: "No Look Further",
+    description:
+      "Our goal is to provide a safe, comfortable, and warm environment so that you can openly discuss your mental health needs. ",
+  },
+  {
+    image: hero,
+    title: "NEED A MENTAL HEALTH PROVIDER?",
+    subtitle: "You're Not Alone",
+    description:
+      "Our goal is to provide a safe, comfortable, and warm environment so that you can openly discuss your mental health needs. ",
+  },
+  {
+    image: hero,
+    title: "NEED A MENTAL HEALTH PROVIDER?",
+    subtitle: "We’re Here For You",
+    description:
+      "Our goal is to provide a safe, comfortable, and warm environment so that you can openly discuss your mental health needs. ",
+  },
+  {
+    image: hero,
+    title: "NEED A MENTAL HEALTH PROVIDER?",
+    subtitle: "No Look Further",
+    description:
+      "Our goal is to provide a safe, comfortable, and warm environment so that you can openly discuss your mental health needs.",
+  },
+  {
+    image: hero,
+    title: "NEED A MENTAL HEALTH PROVIDER?",
+    subtitle: "You're Not Alone",
+    description:
+      "Our goal is to provide a safe, comfortable, and warm environment so that you can openly discuss your mental health needs. ",
+  },
+];
+
+export default function Hero() {
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="relative"> 
-      <Slider {...settings}>
-        {slides.map((slide) => (
-          <div key={slide.id}>
-            <div
-              className="h-[85vh] md:h-[90vh] min-h-[400px] bg-cover bg-center relative flex items-center"
-              style={{ backgroundImage: `url(${slide.img})` }}
-            >
-             
-              <div className="absolute inset-0 bg-black/60"></div>
+    <section className="relative w-full h-screen min-h-[500px] overflow-hidden">
+      <Swiper
+        modules={[Autoplay]}
+        loop={true}
+        speed={800}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        onSwiper={(swiper) => {
+          window.heroSwiper = swiper;
+        }}
+        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        className="w-full h-full"
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index} className="!h-full">
+            <div className="relative w-full h-full">
 
-             
-              <div className="relative z-10 max-w-7xl mx-auto px-4 w-full">
-                <div className="max-w-xl text-white">
-                  
-                  <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif leading-tight">
+              {/* Background Image */}
+              <div
+                className="absolute inset-0 w-full h-full bg-cover bg-center"
+                style={{ backgroundImage: `url(${slide.image})` }}
+              />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+
+              {/* Content */}
+              <div className="relative z-10 flex items-center h-full px-6 md:px-16 lg:px-24 xl:px-[160px]">
+                <div className="max-w-[550px] text-white">
+
+                  {/* Title */}
+                  <h1 className="font-wulkandisplay font-[600] uppercase leading-[36px] text-[24px] md:text-[30px] lg:text-[36px] xl:text-[48px] md:leading-[56px]">
                     {slide.title}
                   </h1>
 
-                  <p className="mt-4 text-lg font-medium">
+                  {/* Subtitle */}
+                  <p className="mt-4 text-[16px] md:text-[20px] font-wulkandisplay font-[600]">
                     {slide.subtitle}
                   </p>
 
-                  <p className="mt-3 text-sm md:text-base text-gray-200 leading-relaxed">
-                    {slide.desc}
+                  {/* Description */}
+                  <p className="w-[300px] md:w-[380px] mt-3 text-[14px] md:text-[18px] leading-[22px] md:leading-[28px] text-white/90 font-playfairdisplay font-[400]  ">
+                    {slide.description}
                   </p>
 
-                  <button className="mt-6 bg-gradient-to-r from-[#C18C2C] via-[#FCF38A] to-[#C18C2C] text-black px-6 py-3 rounded-full font-medium">
-                    Learn More →
-                  </button>
+                  {/* Button */}
+                  <GradientButton
+                    text="Learn More"
+                    fullWidth
+                    className="min-w-[163px] h-[50px] font-[500] mt-12"
+                    icon={
+                      <svg
+                        width="22"
+                        height="23"
+                        viewBox="0 0 22 23"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M3.22656 11.5H17.252" stroke="black" strokeWidth="1.38889" />
+                        <path d="M10.0898 5.11133C10.0898 5.11133 10.9493 11.4884 17.7345 11.4884" stroke="black" strokeWidth="1.38889" />
+                        <path d="M10.0898 17.8888C10.0898 17.8888 10.9493 11.5117 17.7345 11.5117" stroke="black" strokeWidth="1.38889" />
+                      </svg>
+                    }
+                  />
+
+                  {/* Pagination */}
+                  <div className="flex gap-3 mt-20">
+                    {slides.map((_, i) => (
+                      <div
+                        key={i}
+                        onClick={() => {
+                          if (window.heroSwiper) {
+                            window.heroSwiper.slideToLoop(i);
+                          }
+                        }}
+                        className="cursor-pointer"
+                      >
+                        <svg width="18" height="18" viewBox="0 0 24 20">
+                          <defs>
+                            <linearGradient id={`grad-${i}`}>
+                              <stop offset="0%" stopColor="#C18C2C" />
+                              <stop offset="50%" stopColor="#FCF38A" />
+                              <stop offset="100%" stopColor="#C18C2C" />
+                            </linearGradient>
+                          </defs>
+
+                          <polygon
+                            points="6,1 18,1 23,10 18,19 6,19 1,10"
+                            fill={activeIndex === i ? `url(#grad-${i})` : "transparent"}
+                            stroke="#C18C2C"
+                            strokeWidth="1"
+                          />
+                        </svg>
+                      </div>
+                    ))}
+                  </div>
 
                 </div>
               </div>
+
             </div>
-          </div>
-        ))} 
-      </Slider>
-
-      {/* Custom Dots */}
-      <style>
-        {`
-          .custom-dots {
-            bottom: 30px;
-          }
-
-          .custom-dots li button:before {
-            font-size: 10px;
-            color: #C18C2C;
-            opacity: 0.5;
-          }
-
-          .custom-dots li.slick-active button:before {
-            color: #FCF38A;
-            opacity: 1;
-          }
-        `}
-      </style>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
-};
-
-export default Hero;
+}

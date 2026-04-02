@@ -1,15 +1,17 @@
-/** @type {import('tailwindcss').Config} */
+import defaultTheme from 'tailwindcss/defaultTheme'
+
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        worksans: ['"Work Sans"', 'sans-serif'],
-      },
+      // fontFamily: {
+      //   playfair: ["PlayfairDisplay", "serif"],
+      //   wulkan: ["WulkanDisplay", "serif"],
+      //   work: ["WorkSans", "sans-serif"],
+      // },
     },
   },
   plugins: [],
-}
+};
+
+

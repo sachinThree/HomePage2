@@ -1,1 +1,51 @@
+/* @import './fonts.css'; */
 @import "tailwindcss";
+@font-face {
+  font-family: 'WorkSans';
+  src: url("../src/assets/fonts/WorkSans-Medium.ttf") format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url("../src/assets/fonts/WorkSans-SemiBold.ttf") format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url("../src/assets/fonts/PlayfairDisplay-Regular.ttf") format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'WulkanDisplay';
+  src: url("./assets/fonts/WulkanDisplaySemiBold.ttf") format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'WulkanDisplay';
+  src: url("./assets/fonts/WulkanDisplayBold.ttf") format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'WulkanDisplay';
+  src: url("./assets/fonts/WulkanDisplayBlack.ttf") format('truetype');
+  font-weight: 900;
+}
+
+
+
+@theme{
+  --font-worksans: 'WorkSans', sans-serif;
+}
+
+@theme{
+  --font-playfairdisplay: 'PlayfairDisplay', serif;
+}
+
+@theme{
+  --font-wulkandisplay: 'WulkanDisplay', sans-serif;
+}
