@@ -1,16 +1,85 @@
-# React + Vite
+# 🚀 ADA Homepage (React + Tailwind CSS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Overview
+This project is a **pixel-perfect, responsive homepage** built using **ReactJS** and **Tailwind CSS**, based on the provided Figma design.
 
-Currently, two official plugins are available:
+The goal of this assignment is to demonstrate:
+- Clean UI implementation  
+- Component-based architecture  
+- Responsive design skills  
+- JSON-driven dynamic content  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🛠️ Tech Stack
+- ⚛️ ReactJS  
+- 🎨 Tailwind CSS  
+- ⚡ Vite (for fast development)  
+- 📦 JSON (for dynamic content)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+src/
+│── assets/ # Images & icons
+│── components/ # Reusable UI components
+│── data/ # JSON files (content)
+│── pages/ # Page components (Home)
+│── App.jsx
+│── main.jsx
+
+
+
+---
+
+## ✨ Features
+- ✅ Pixel-perfect UI based on Figma  
+- ✅ Fully responsive (Mobile, Tablet, Desktop)  
+- ✅ Reusable components  
+- ✅ Dynamic content from JSON files  
+- ✅ Accordion functionality (FAQ section)  
+- ✅ Clean and maintainable code  
+
+---
+
+## 📱 Responsive Design
+The layout is optimized for:
+- Mobile devices 📱  
+- Tablets 📲  
+- Desktop 💻  
+
+---
+
+## 📊 Data Handling
+All content (like FAQ, sections, text, etc.) is managed through **JSON files**.
+
+Example:
+```json
+{
+  "faqs": [
+    {
+      "question": "Convenient access",
+      "answer": "We offer in-person and virtual psychiatry services..."
+    }
+  ]
+}
+
+## ⚙️ Installation & Setup
+
+```bash
+# 1️⃣ Clone the repository
+git clone https://github.com/sachinThree/HomePage2.git
+
+# 2️⃣ Go to project folder
+cd HomePage2
+
+# 3️⃣ Install dependencies
+npm install
+
+# 4️⃣ Start development server
+npm run dev
+
+## 🌐 Live Preview URL
+https://skhome-page.netlify.app/
+
